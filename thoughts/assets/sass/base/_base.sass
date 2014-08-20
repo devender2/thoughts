@@ -1,0 +1,86 @@
+*, *:before, *:after
+	+box-sizing(border-box)
+
+html, body
+	@extend .body
+	font-size: 18px
+	height: 100%
+
+img 
+	max-width: 100%
+	display: block
+	height: auto
+
+main 
+	margin: $baseline 0
+	>img
+		margin: $baseline 0
+
+h1
+	@extend .h1
+h2
+	@extend .h2
+
+hr
+	border-color: $grey-blue
+
+pre
+	background: $grey-dark
+	color: $grey-light
+	padding: $baseline
+	margin: $baseline 0 
+	code
+		padding: 0
+		white-space: normal
+
+code
+	font-family: $pre
+	color: $black
+	background: $grey-light
+	padding: 3px
+
+a
+	@include transition(color .5s)
+
+p
+	margin-bottom: $baseline/1.5
+	@include transition(border-style .5s)
+	> a:hover
+		border-bottom: 1px dashed
+		text-decoration: none
+
+blockquote
+	margin: $baseline*2 $baseline
+	border-left: 5px solid
+	border-color: $orange
+	padding-left: 10px
+	font-family: $headline
+	font-weight: 200
+	text-align: left
+	+media(max, 650px)
+		margin-left: $baseline/2
+
+article
+	> p:first-of-type
+		font-family: $headline
+		font-weight: normal
+		font-size: 22px
+	> hr
+		border: 1px dashed $grey-light
+	ul
+		list-style-type: disc
+	ol 
+		list-style-type: decimal
+	ul,ol
+		margin: $baseline*2 0 $baseline*2 $baseline
+		list-style-position: inside
+		+media(max, 650px)
+			list-style-position: outside 
+		li
+			margin-bottom: rem(10px)
+
+.container 
+	max-width: 650px
+
+
+
