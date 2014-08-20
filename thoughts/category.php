@@ -32,7 +32,7 @@
 			</section>
 
 			<?php endif; ?>
-
+			<?php thoughts_paginate(); ?>
 	</main>		
 <?php
 get_footer();

@@ -33,7 +33,7 @@ function thoughts_paginate() {
      
         $current_page = max(1, get_query_var('paged'));
         
-        echo '<div class="paginate">'
+        echo '<div class="paginate">';
 
         echo paginate_links(array(
             'base' => get_pagenum_link(1) . '%_%',
@@ -44,7 +44,7 @@ function thoughts_paginate() {
             'next_text' => 'Next'
         ));
 
-        echo '</div>'
+        echo '</div>';
     }
 }
 endif; 
