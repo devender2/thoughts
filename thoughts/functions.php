@@ -58,6 +58,7 @@ endif;
 function thoughts_register_scripts() {
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/assets/js/components/modernizr/modernizr.js', array('jquery'), '1.0');
     wp_enqueue_script( 'modernizr' );
+
     wp_register_script( 'app', get_template_directory_uri() . '/assets/js/app.js', array('jquery', 'modernizr'), '1.0');
     wp_enqueue_script( 'app' );
     

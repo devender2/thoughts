@@ -19,7 +19,7 @@
 	
 	<!-- if there is a category output the class with the category name -->
 	<!-- if not just create an article with the class "post" -->
-	<?php if($category): ?>
+	<?php if( $category ): ?>
 		<article class="post <?php $category ?>">
 	<?php else :?>
 		<article class="post">
