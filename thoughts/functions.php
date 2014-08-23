@@ -8,18 +8,23 @@ error_reporting(E_ALL | E_STRICT);
 
 // Custom character length for the_excerpt
 function thoughts_custom_excerpt_length( $length ) {
-	return 500;
+	return 100;
 }
+add_filter( 'excerpt_length', 'thoughts_custom_excerpt_length', 999 );
 
 // Removes the [...] from excerpt
 function thoughts_new_excerpt_more( $more ) {
 	return ' ';
 }
+add_filter('excerpt_more', 'thoughts_new_excerpt_more');
+
 
 //Register the menu through WP
 function thoughts_register_theme_menu() {
     register_nav_menu( 'primary', 'Main Navigation Menu' );
 }
+add_action( 'init', 'thoughts_register_theme_menu' );
+
 
 if ( ! function_exists( 'thoughts_paginate' ) ) :
 //This function creates pagination if 
@@ -61,18 +66,15 @@ function thoughts_register_scripts() {
     wp_register_style( 'bootstrap_theme', get_template_directory_uri() . '/assets/js/components/bootstrap/dist/css/bootstrap-theme.min.css', array(), '3', 'all' );
     wp_enqueue_style( 'app' );
 }
+add_action( 'wp_enqueue_scripts', 'thoughts_register_scripts' );
+
 
 // Making featured images possible
 add_theme_support( 'post-thumbnails' );
 
-// Making thoughts_register_scripts work
-add_action( 'wp_enqueue_scripts', 'thoughts_register_scripts' );
-
-//Making the Menu work
-add_action( 'init', 'thoughts_register_theme_menu' );
 
 
 
 
-add_filter('excerpt_more', 'thoughts_new_excerpt_more');
-add_filter( 'excerpt_length', 'thoughts_custom_excerpt_length', 999 );
+
+
