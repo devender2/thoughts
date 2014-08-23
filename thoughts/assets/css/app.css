@@ -393,3 +393,12 @@ main {
       color: white;
       background: #07abcd;
       text-decoration: none; }
+
+.paginate a {
+  padding: 3px 7px;
+  background: #f1f1f1;
+  border-radius: 3px; }
+  .paginate a:hover {
+    text-decoration: none;
+    background: #07abcd;
+    color: white; }

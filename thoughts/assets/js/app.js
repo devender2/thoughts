@@ -18,9 +18,6 @@ $(document).ready(function(){
 		$('nav, main').removeClass('shift');
 	});
 
-	// This uses hypher.js to hyphenate our paragraphs
-	$('p, article, main, em, strong').hyphenate('en-us');
-
 })
 
 })(jQuery)
