@@ -7,14 +7,14 @@ $(document).ready(function(){
 	// then show the mask (overlay) element
 	$('.navOpen').click(function(){
 		$('main, nav').addClass('shift');
-		$('.mask').show();
+		$('.mask').fadeIn(400);
 	});
 
 	//This function Closes the navigation
 	// and hides the overlay
 	$('.mask, .closeNav').click(function(e){
 		e.preventDefault;
-		$('.mask').hide();
+		$('.mask').fadeOut(400);
 		$('nav, main').removeClass('shift');
 	});
 

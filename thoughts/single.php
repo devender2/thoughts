@@ -46,7 +46,7 @@
 	<section class="related-articles">
 		<h1>More Articles in <a href="#" class="category"><?php echo '<a class="category" href="
 															'.get_category_link($category[0]->term_id ).'">'
-															.$category[0]->cat_name.'</a>';  ?></a></h1>
+															 .$category[0]->cat_name.'</a>';  ?></a></h1>
 		<ul>
 	<?php 
 		$related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 3, 'post__not_in' => array($post->ID) ) );

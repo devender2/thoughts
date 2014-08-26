@@ -18,8 +18,12 @@
 				<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 				<div class="meta">
 					<p>
-						Posted in <?php $category = get_the_category(); echo '<a class="category" href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
- ?>,
+						Posted in <?php 
+									$category = get_the_category(); 
+									echo '<a class="category" href="
+										'.get_category_link($category[0]->term_id ).'">'
+										.$category[0]->cat_name.'</a>'; 
+									?>,
 						<span class="date"> 
 							<?php the_time('F jS, Y'); ?>
 						</span>
