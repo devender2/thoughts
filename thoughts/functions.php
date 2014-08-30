@@ -72,10 +72,3 @@ add_action( 'wp_enqueue_scripts', 'thoughts_register_scripts' );
 
 // Making featured images possible
 add_theme_support( 'post-thumbnails' );
-
-
-
-
-
-
-
