@@ -231,11 +231,10 @@ nav {
     position: relative; }
     nav ul > li {
       margin: 0;
-      vertical-align: middle; }
-      nav ul > li:hover {
-        background: white; }
-        nav ul > li:hover a:not(.closeNav) {
-          color: #07abcd; }
+      vertical-align: middle;
+      position: relative; }
+      nav ul > li:hover a:not(.closeNav) {
+        color: #07abcd; }
       nav ul > li a {
         font-weight: 300;
         color: #24221e;

@@ -17,12 +17,6 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the theme root directory -->
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
-	<!--[if lt IE 9]>
-    <script type="text/javascript" src="assets/js/components/console-shim/console-shim-min.js"></script>
-    <script type="text/javascript" src="assets/js/components/html5shiv/dist/html5shiv.js"></script>
-    <script type="text/javascript" src="assets/js/components/respond/dest/respond.min.js"></script>
-    <![endif]-->
-
     <?php wp_head(); ?>
 </head>
 

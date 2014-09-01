@@ -56,6 +56,31 @@
 	margin: 0 auto
 	@extend .group
 
+
+=animation($animate...)
+	$max: length($animate)
+	$animations: ""
+	@for $i from 1 through $max
+		$animations: #{$animations + nth($animate, $i)}
+		@if $i < $max
+			$animations: #{$animations + ", "}
+	-webkit-animation: $animations
+	-moz-animation: $animations
+	-o-animation: $animations
+	animation: $animations
+
+=keyframes($animationName)
+	@-webkit-keyframes #{$animationName}
+		@content
+	@-moz-keyframes #{$animationName}
+		@content
+	@-o-keyframes #{$animationName}
+		@content
+	@keyframes #{$animationName}
+		@content
+    
+
+
 // Push or pull a grid element while leaving it in the flow of the document and effecting other gird elements. 
 //
 // $column-span   - Number of columns you would like to push over.
